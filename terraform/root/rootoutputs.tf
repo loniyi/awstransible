@@ -128,12 +128,8 @@ output "S3 Bucket Name" {
 
 
 
-
-
+#----WebApp Outputs------
 output "WebApp Private Ips" {
   value = "${module.compute.app_privateips}"
 }
 
-output "app-private-ips" {
-  value = "${module.compute.app-private-ips}"
-}

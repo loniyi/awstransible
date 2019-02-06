@@ -73,16 +73,7 @@ output "gitlab_privateip" {
 
 
 #---Application Outputs
-output "app_autoscalinggroup" {
-   value = "${module.application.app_autoscalinggroup}"
-}
-
-
 output "app_privateips" {
   value = "${module.application.app_privateips}"
-}
-
-output "app-private-ips" {
-  value = "${module.application.app-private-ips}"
 }
 

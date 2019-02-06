@@ -41,16 +41,6 @@ resource "aws_autoscaling_group" "app_asg" {
   }
 }
 
-
-data "aws_instances" "app_asg" { 
-  instance_tags {
-    Name = "${var.app_projectname}-AppServer"
-  }
-  depends_on = ["aws_autoscaling_group.app_asg"]
-}
-
-
-
 data "aws_instances" "application_asg" {
   depends_on = [ "aws_autoscaling_group.app_asg" ]
   
@@ -59,7 +49,7 @@ data "aws_instances" "application_asg" {
   }
 }
 
-data "aws_instance" "asg-one-instances" {
+data "aws_instance" "asg_instances" {
   count = "${var.app_asgcapacity}"
   depends_on = ["data.aws_instances.application_asg"]
   instance_id = "${data.aws_instances.application_asg.ids[count.index]}"
