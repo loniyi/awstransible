@@ -23,11 +23,9 @@ Sponsored by [Cloudcraft - the best way to draw AWS diagrams](https://cloudcraft
 <a href="https://cloudcraft.co/?utm_source=terraform-aws-vpc" target="_blank"><img src="https://raw.githubusercontent.com/antonbabenko/modules.tf-lambda/master/misc/cloudcraft-logo.png" alt="Cloudcraft - the best way to draw AWS diagrams" width="211" height="56" /></a>
 
 ## Preview
-**Infrastructure Preview](https://ibb.co/ngVqNRr)**
+**[Infrastructure Preview](https://ibb.co/ngVqNRr)**
 
 **[Architecture Stack](https://ibb.co/SJ8gFff)**
-
-<a><img src="https://ibb.co/ngVqNRr" alt="Cloudcraft - the best way to draw AWS diagrams" width="211" height="56" /></a>
 
 ### Prerequisites
 
