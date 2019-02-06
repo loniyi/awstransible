@@ -18,15 +18,17 @@ These types of resources are supported:
 
 Sponsored by [Cloudcraft - the best way to draw AWS diagrams](https://cloudcraft.co/?utm_source=terraform-aws-vpc)
 
+<a href="https://ibb.co/ngVqNRr" target="_blank"><img src="https://ibb.co/ngVqNRr" alt="Infrastructure Preview" width="500" height="500" /></a>
+
 <a href="https://cloudcraft.co/?utm_source=terraform-aws-vpc" target="_blank"><img src="https://raw.githubusercontent.com/antonbabenko/modules.tf-lambda/master/misc/cloudcraft-logo.png" alt="Cloudcraft - the best way to draw AWS diagrams" width="211" height="56" /></a>
 
 ## Preview
 
-<a href="https://ibb.co/R6qg3Mw" target="_blank"><img src="https://ibb.co/R6qg3Mw" alt="Infrastructure Preview" width="500" height="100" /></a>
+<a href="https://ibb.co/ngVqNRr" target="_blank"><img src="https://ibb.co/ngVqNRr" alt="Infrastructure Preview" width="500" height="500" /></a>
 
-<a href="https://ibb.co/Bc02gVT" target="_blank"><img src="https://ibb.co/Bc02gVT" alt="Estimated Project Cost" width="500" height="100" /></a>
+<a href="https://ibb.co/Bc02gVT" target="_blank"><img src="https://ibb.co/Bc02gVT" alt="Estimated Project Cost" width="500" height="500" /></a>
 
-<a href="https://ibb.co/SJ8gFff" target="_blank"><img src="https://ibb.co/SJ8gFff" alt="Architecture Stack" width="500" height="100" /></a>
+<a href="https://ibb.co/SJ8gFff" target="_blank"><img src="https://ibb.co/SJ8gFff" alt="Architecture Stack" width="500" height="500" /></a>
 
 ### Prerequisites
 
