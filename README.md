@@ -22,11 +22,11 @@ Sponsored by [Cloudcraft - the best way to draw AWS diagrams](https://cloudcraft
 
 ## Preview
 
-<a href="https://cloudcraft.co/view/31c5be3e-4c1e-4df5-926c-ac7606801fd3?key=4LFRfV9HkOVlSJQ2sL29oA&interactive=true&embed=true" target="_blank"><img src="https://cloudcraft.co/view/31c5be3e-4c1e-4df5-926c-ac7606801fd3?key=4LFRfV9HkOVlSJQ2sL29oA&interactive=true&embed=true" alt="Infrastructure Preview" width="211" height="56" /></a>
+<a href="https://ibb.co/R6qg3Mw" target="_blank"><img src="https://ibb.co/R6qg3Mw" alt="Infrastructure Preview" width="500" height="100" /></a>
 
-<a href="https://ibb.co/Bc02gVT" target="_blank"><img src="https://ibb.co/Bc02gVT" alt="Estimated Project Cost" width="211" height="56" /></a>
+<a href="https://ibb.co/Bc02gVT" target="_blank"><img src="https://ibb.co/Bc02gVT" alt="Estimated Project Cost" width="500" height="100" /></a>
 
-<a href="https://ibb.co/SJ8gFff" target="_blank"><img src="https://ibb.co/SJ8gFff" alt="Architecture Stack" width="211" height="56" /></a>
+<a href="https://ibb.co/SJ8gFff" target="_blank"><img src="https://ibb.co/SJ8gFff" alt="Architecture Stack" width="500" height="100" /></a>
 
 ### Prerequisites
 
