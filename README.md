@@ -206,7 +206,6 @@ This Ansible playbook supports roles for the installation and configuration of t
 
 * JENKINS
     * `Java`
-    * `ChefInspec`
     * `Maven`
     * `Git`
 * VAULT
@@ -214,7 +213,6 @@ This Ansible playbook supports roles for the installation and configuration of t
 * ROCKETCHAT
 * BASTIONHOST
 * WEBAPP
-    * `ChefInspec`
     * `SSH`
 
 ## Usage
