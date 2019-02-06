@@ -1,5 +1,5 @@
 [bastion]
-18.216.36.115
+(BASTION HOST EIP)
 
 [rocketchat]
 10.20.11.110
@@ -14,4 +14,4 @@
 10.20.11.140
 
 [webapp]
-10.20.11.62
+(WEBAPP IPS/HostName)
