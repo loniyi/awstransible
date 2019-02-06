@@ -1,4 +1,4 @@
-[bastion]
+[bastionhost]
 (BASTION HOST EIP)
 
 [rocketchat]
