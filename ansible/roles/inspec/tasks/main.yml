@@ -1,0 +1,10 @@
+---
+- name: Yum Install Packages
+  yum: name={{item}} state=present
+  with_items:
+   - wget
+
+- name: Install Chef Inspec
+  yum:
+   name: https://packages.chef.io/files/stable/inspec/3.2.6/el/7/inspec-3.2.6-1.el7.x86_64.rpm
+   state: present

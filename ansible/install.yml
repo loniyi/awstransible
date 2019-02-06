@@ -1,0 +1,70 @@
+--- # CICD Pipeline Project
+
+- name: Configure Bastion Server
+  hosts: bastionhost
+  remote_user: ec2-user
+  become: yes
+  gather_facts: false
+
+  roles:
+    - common
+
+- name: Configure Jenkins Server
+  hosts: jenkins
+  remote_user: ec2-user
+  become: yes
+  gather_facts: false
+  
+  roles:
+    - common
+    - java
+    - jenkins
+    - inspec
+    - maven
+    - github
+    - sshkey2
+
+- name: Configure Vault Server
+  hosts: vault
+  remote_user: ec2-user
+  become: yes
+  gather_facts: false
+
+  roles:
+    - common
+    - vault
+
+- name: Configure Gitlab Server
+  hosts: gitlab
+  remote_user: ec2-user
+  become: yes
+  gather_facts: false
+
+  roles:
+    - common
+    - gitlab
+
+- name: Configure Rocketchat Server
+  hosts: rocketchat
+  remote_user: ec2-user
+  become: yes
+  gather_facts: false
+
+  roles:
+    - common
+    - rocketchat
+  tags:
+    - rocket 
+
+- name: Configure Web App Server
+  hosts: webapp
+  remote_user: ec2-user
+  become: yes
+  gather_facts: false
+
+  roles:
+    - common
+    - sshkey
+    - inspec
+  tags:
+    - webapp 

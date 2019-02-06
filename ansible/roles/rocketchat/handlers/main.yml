@@ -1,0 +1,6 @@
+- name: Install GraphicsMagick 
+  action: yum pkg=GraphicsMagick state=installed
+- name: Install node version required by Rocket.Chat
+  command: n 8.11.3
+- name: reload systemd daemon
+  command: systemctl daemon-reload 

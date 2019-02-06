@@ -1,0 +1,9 @@
+- name: install updates
+  yum: 
+    name: "*"
+    state: latest 
+    use_backend: yum
+
+- name: install epel-release
+  yum: name=https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm
+     

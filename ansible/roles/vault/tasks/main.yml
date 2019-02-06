@@ -1,0 +1,25 @@
+#- name: install unzip
+#  yum:
+#    name: unzip
+#    state: latest
+#    use_backend: yum
+
+- name: Install Unzip Package
+  action: yum name=unzip state=installed
+
+- name: Download and unzip Vault package from HashiCorp directly into /usr/bin
+  unarchive:
+    src: https://releases.hashicorp.com/vault/1.0.2/vault_1.0.2_linux_amd64.zip
+    dest: /usr/bin 
+    remote_src: yes
+
+- name: Create Vault configuration directory at /etc/vault
+  file:
+    path: /etc/vault
+    state: directory 
+
+- name: Create Vault configuration file at /etc/vault/listener.hcl
+  raw: echo -e "ui=true\n\nstorage \"inmem\" {}\n\nlistener \"tcp\" {\n   address = \"10.20.11.160:80\"\n   tls_disable = 1\n}" > /etc/vault/listener.hcl
+
+- name: Start Vault Server UI
+  shell: /usr/bin/vault server -config=/etc/vault/listener.hcl &

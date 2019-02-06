@@ -1,0 +1,2 @@
+- name: Start GitLab Service
+  shell: gitlab-ctl reconfigure

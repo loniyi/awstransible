@@ -1,0 +1,16 @@
+
+- name: Install Java 1.8.0 JDK 
+  action: yum name=java-1.8.0* state=installed
+
+- name: Configure java and its environment variables
+  lineinfile:
+    dest: "{{java_env_file}}"
+    line: "{{ item.line }}"
+    create: yes
+    state: present
+  with_items:
+    - { line: 'JAVA_HOME={{java_home_parent_directory}}/java-1.8.0-openjdk-{{java_version}}.amzn2.x86_64' } 
+    - { line: 'PATH=$PATH:$JAVA_HOME/bin' }
+   
+- name: Exports/Run Jenkins env file for make JAVA_HOME available globally
+  shell: "source {{java_env_file}}"

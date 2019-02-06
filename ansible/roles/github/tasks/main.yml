@@ -1,0 +1,5 @@
+---
+- name: Install Git
+  action: yum name=git state=installed
+  tags:
+    - git

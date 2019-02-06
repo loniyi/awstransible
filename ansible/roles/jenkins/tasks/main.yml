@@ -1,0 +1,72 @@
+- name: Download and Install Jenkins Repo
+  get_url:
+    url: http://pkg.jenkins-ci.org/redhat/jenkins.repo
+    dest: /etc/yum.repos.d/jenkins.repo
+
+- name: Download and install Jenkins Repo Key 
+  rpm_key: 
+    state: present
+    key: https://jenkins-ci.org/redhat/jenkins-ci.org.key
+
+- name: Install Jenkins Server
+  action: yum name=jenkins state=installed
+
+- name: Start and Enable Jenkins
+  action: systemd name=jenkins state=restarted enabled=yes
+
+- block:
+    - name: Create a 2048-bit SSH key for user ec2-user
+      user:
+        name: ec2-user
+        generate_ssh_key: yes
+        ssh_key_bits: 2048
+        ssh_key_file: .ssh/id_rsa
+  
+    - name: Add SSH-Key to the SSH Agent
+      shell: |
+        eval "$(ssh-agent)"
+        ssh-add /home/ec2-user/.ssh/id_rsa
+
+    - fetch:
+        src: /home/ec2-user/.ssh/id_rsa.pub
+        dest: /Users/admin/shadowsoft/project/.aws/jenkins.pub
+        flat: yes
+      tags:
+        - sshkeynew
+   
+    - name: Creates .ssh directory
+      file:
+        path: /var/lib/jenkins/.ssh
+        state: directory
+      tags:
+        - copyssh
+
+    - name: copy SSH KEY
+      copy: src=/home/ec2-user/.ssh/id_rsa dest=/var/lib/jenkins/.ssh/jenkins remote_src=yes directory_mode=yes
+      tags:
+        - copyssh
+  
+    - fetch:
+        src: /home/ec2-user/.ssh/id_rsa
+        dest: /Users/admin/shadowsoft/project/.aws/jenkins
+        flat: yes
+      tags:
+        - sshkeynew
+  tags: 
+    - ssh
+
+- name: Sleep for 40 seconds and continue with play
+  wait_for: timeout=40
+
+- name: Get init password Jenkins
+  shell: cat /var/lib/jenkins/secrets/initialAdminPassword
+  changed_when: false
+  register: result
+  tags:
+    - jenkinspassword
+
+- name: Print init password Jenkins
+  debug:
+    var: result.stdout
+  tags:
+    - jenkinspassword

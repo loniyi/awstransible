@@ -1,0 +1,6 @@
+- name: Add GitLab repo to list of accessible repositories
+  shell: curl https://packages.gitlab.com/install/repositories/gitlab/gitlab-ee/script.rpm.sh | sudo bash warn=false
+
+- name: Install GitLab
+  action: yum name="gitlab-ee" state=installed
+  notify: Start GitLab Service

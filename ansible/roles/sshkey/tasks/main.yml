@@ -1,0 +1,6 @@
+ 
+- name: Set authorized key taken from file
+  authorized_key:
+    user: ec2-user
+    state: present
+    key: "{{ lookup('file', '/Users/admin/shadowsoft/project/.aws/jenkins.pub') }}"
