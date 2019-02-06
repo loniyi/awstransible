@@ -22,11 +22,9 @@ Sponsored by [Cloudcraft - the best way to draw AWS diagrams](https://cloudcraft
 
 ## Preview
 
-[![Infrastructure Preview](https://cloudcraft.co/view/31c5be3e-4c1e-4df5-926c-ac7606801fd3?key=4LFRfV9HkOVlSJQ2sL29oA&interactive=true&embed=true)
+**[Infrastructure Preview](https://ibb.co/ngVqNRr)**
 
-**[Estimated Project Cost](https://ibb.co/SJ8gFff)**
-
-**[Architecture Stack](https://ibb.co/Bc02gVT)**
+**[Architecture Stack](https://ibb.co/SJ8gFff)**
 
 ### Prerequisites
 
@@ -203,7 +201,7 @@ output "delegation_nameservers" {
 
 ## Authors
 
-Module is maintained by [loniyi] with help from [Elliot Holden](https://gitlab.com/elliotholden).
+Module is maintained by [Loniyi](https://gitlab.com/loniyi) with help from [Elliot Holden](https://gitlab.com/elliotholden).
 
 ## License
 

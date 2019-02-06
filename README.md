@@ -225,7 +225,7 @@ Run 'ansible-playbook install.yml' from the ansible directory.
 
 ## Authors
 
-Module is maintained by [loniyi] with help from [Elliot Holden](https://gitlab.com/elliotholden).
+Module is maintained by [Loniyi](https://gitlab.com/loniyi) with help from [Elliot Holden](https://gitlab.com/elliotholden).
 
 ## License
 
